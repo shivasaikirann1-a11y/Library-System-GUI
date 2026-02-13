@@ -1,54 +1,62 @@
-# 📚 Library Management System (Java Swing)
-
-A simple **Library Management System GUI** built using **Java Swing**.
-This desktop application allows users to issue, return, and manage books through an interactive graphical interface.
+Here is your **humanized README** rewritten cleanly, without emojis, symbols, or decorative formatting. It reads like standard project documentation rather than a poster.
 
 ---
 
-## ✨ Features
+# Library Management System (Java Swing)
 
-* 📖 View list of available books
-* ✅ Issue a book
-* 🔁 Return / Unissue a book
-* 🔄 Refresh book list
-* 📌 Displays issued books with an `(Issued)` label
-* 💬 Popup messages for user actions and errors
+## Overview
+
+This project is a desktop-based Library Management System developed using Java Swing. The application provides a graphical interface that allows users to manage books by issuing and returning them.
+
+It is designed as a beginner-to-intermediate level GUI project demonstrating event handling, object-oriented programming, and basic data management within a desktop application.
 
 ---
 
-## 🛠 Technologies Used
+## Features
+
+* View list of available books
+* Issue a book
+* Return or unissue a book
+* Refresh the book list
+* Issued books are marked with an “(Issued)” label
+* Popup messages for user actions and errors
+
+---
+
+## Technologies Used
 
 * Java
 * `java.awt.*`
 * `javax.swing.*`
 * `java.util.*`
-* Swing components:
 
-  * `JFrame`
-  * `JList`
-  * `JButton`
-  * `JTextField`
-  * `JOptionPane`
-  * `JScrollPane`
+### Swing Components Used
+
+* JFrame
+* JList
+* JButton
+* JTextField
+* JOptionPane
+* JScrollPane
+
+No external libraries or databases are used.
 
 ---
 
-## ▶️ How to Run
+## How to Run
 
-### ✅ Requirements
+### Requirements
 
 * Java JDK 8 or higher
 * Any Java IDE (IntelliJ, Eclipse, VS Code) or terminal
 
----
-
-### 🔹 Step 1: Compile
+### Compile
 
 ```bash
 javac LibrarySystemGUI.java
 ```
 
-### 🔹 Step 2: Run
+### Run
 
 ```bash
 java LibrarySystemGUI
@@ -56,9 +64,9 @@ java LibrarySystemGUI
 
 ---
 
-## 📌 Default Books Included
+## Default Books Included
 
-The system initializes with the following books:
+The system initializes with a predefined list of books:
 
 * Java Basics
 * Swing in Action
@@ -70,23 +78,26 @@ The system initializes with the following books:
 
 ---
 
-## 🧠 How It Works
+## System Design
 
-### 🔹 Book Storage
+### Book Storage
 
-* Books are stored in an `ArrayList<Book>`.
-* Each `Book` object contains:
+Books are stored in an `ArrayList<Book>`.
 
-  * `String title`
-  * `boolean issued`
+Each `Book` object contains:
+
+* `String title`
+* `boolean issued`
+
+The issued flag determines whether the book is currently available or not.
 
 ---
 
-### 🔹 Display System
+### Display Mechanism
 
-* `DefaultListModel<String>` manages book display.
-* `JList` shows books.
-* Issued books appear as:
+* `DefaultListModel<String>` manages the display data.
+* A `JList` component renders the book list.
+* Issued books are displayed in the format:
 
 ```
 Book Name (Issued)
@@ -94,36 +105,38 @@ Book Name (Issued)
 
 ---
 
-### 🔹 Issue Book
+### Issue Book Process
 
-* User enters book title in the text field.
-* If the book exists and is not issued → it gets issued.
-* If already issued → shows warning.
-
----
-
-### 🔹 Return / Unissue Book
-
-* If the book is issued → it becomes available again.
-* If not issued → shows warning.
+1. User enters the book title in the text field.
+2. The system searches for the book.
+3. If found and available, it is marked as issued.
+4. If already issued, a warning message is displayed.
 
 ---
 
-### 🔹 Error Handling
+### Return / Unissue Process
 
-The system handles:
+1. The system checks whether the book is issued.
+2. If issued, it becomes available again.
+3. If not issued, a warning message is shown.
+
+---
+
+### Error Handling
+
+The application handles common user errors, including:
 
 * Empty input
 * Book not found
-* Issuing already issued book
-* Returning non-issued book
+* Attempting to issue an already issued book
+* Attempting to return a non-issued book
 
 ---
 
-## 🖥 GUI Layout
+## GUI Layout
 
-* **Center:** Scrollable book list
-* **Bottom Panel:**
+* Center: Scrollable list displaying books
+* Bottom panel:
 
   * Book input field
   * Issue button
@@ -131,11 +144,11 @@ The system handles:
   * Unissue button
   * Refresh button
 
-Window size: `385 x 280`
+Window size: 385 × 280 pixels
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 LibrarySystemGUI.java
@@ -144,29 +157,14 @@ README.md
 
 ---
 
-## 🚀 Possible Improvements
+## Possible Improvements
 
-* 🔐 Add user login system
-* 💾 Store books in a file or database
-* ➕ Add new book feature
-* ❌ Delete book feature
-* 📊 Add issue history tracking
-* 🎨 Improve UI styling
-* 🧑‍💻 Add role-based access (Admin/User)
-
----
-
-## 📄 License
-
-This project is open-source and intended for educational purposes.
+* Add a user login system
+* Store books in a file or database
+* Add functionality to insert new books
+* Add delete book feature
+* Implement issue history tracking
+* Improve UI styling
+* Add role-based access (Admin/User)
 
 ---
-
-## 👨‍💻 Author
-
-Created as a Java Swing GUI project to demonstrate:
-
-* Event handling
-* Object-oriented programming
-* GUI design
-* Basic library management logic
